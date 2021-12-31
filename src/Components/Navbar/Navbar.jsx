@@ -5,46 +5,48 @@ import Button from "@mui/material/Button";
 export const Navbar = () => {
   return (
     <Main>
-      <div className="upper">
-        <div className="left">
-          <div className="logo">
-            <img
-              src="https://fanspo.com/public/assets/images/logo/fanspo-icon-square.svg"
-              alt=""
-            />
+      <div className="InnerMain">
+        <div className="upper">
+          <div className="left">
+            <div className="logo">
+              <img
+                src="https://fanspo.com/public/assets/images/logo/fanspo-icon-square.svg"
+                alt=""
+              />
+            </div>
+            <div className="name">
+              <img
+                src="https://fanspo.com/public/assets/images/logo/fanspo-white-text.svg"
+                alt=""
+              />
+            </div>
+            <div className="NBA">NBA</div>
+            <div className="NFL">NFL</div>
           </div>
-          <div className="name">
-            <img
-              src="https://fanspo.com/public/assets/images/logo/fanspo-white-text.svg"
-              alt=""
-            />
+          <div className="right">
+            <div className="input">
+              <span className="material-icons">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+            <Button variant="outlined">Login</Button>
+            <span class="material-icons dot">more_vert</span>
           </div>
-          <div className="NBA">NBA</div>
-          <div className="NFL">NFL</div>
         </div>
-        <div className="right">
-          <div className="input">
-            <span className="material-icons">search</span>
-            <input type="text" placeholder="Search" />
+        <div className="lower">
+          <span class="material-icons">sports_soccer</span>
+          <div className="line"></div>
+          <div className="div">
+            SPACES <span class="material-icons">expand_more</span>
           </div>
-          <Button variant="outlined">Login</Button>
-          <span class="material-icons dot">more_vert</span>
-        </div>
-      </div>
-      <div className="lower">
-        <span class="material-icons">sports_soccer</span>
-        <div className="line"></div>
-        <div className="div">
-          SPACES <span class="material-icons">expand_more</span>
-        </div>
-        <div className="div">
-          TOOLS <span class="material-icons">expand_more</span>
-        </div>
-        <div className="div">
-          POSTS <span class="material-icons">expand_more</span>
-        </div>
-        <div className="div">
-          RESOURCES <span class="material-icons">expand_more</span>
+          <div className="div">
+            TOOLS <span class="material-icons">expand_more</span>
+          </div>
+          <div className="div">
+            POSTS <span class="material-icons">expand_more</span>
+          </div>
+          <div className="div">
+            RESOURCES <span class="material-icons">expand_more</span>
+          </div>
         </div>
       </div>
     </Main>
@@ -59,6 +61,11 @@ const Main = styled.div`
   padding: 0 20px;
   background-color: rgb(26, 26, 26);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  & .InnerMain {
+    max-width: 1280px;
+    margin: auto;
+  }
   & .upper {
     height: 48px;
     display: flex;
@@ -163,6 +170,7 @@ const Main = styled.div`
       align-items: center;
       color: rgb(226, 224, 224);
       font-weight: 600;
+      cursor: pointer;
       & span {
       }
     }
